@@ -183,9 +183,23 @@ h1, h2, h3 { font-family: var(--font-display); color: var(--ink); margin: 0; }
   transition: border-color 0.15s ease, color 0.15s ease;
 }
 .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
-.theme-toggle__icon--sun { display: none; }
-:root[data-theme="light"] .theme-toggle__icon--sun { display: block; }
-:root[data-theme="light"] .theme-toggle__icon--moon { display: none; }
+/* Default (Dark Theme): Show Sun */
+.theme-toggle__icon--sun {
+    display: block;
+}
+
+.theme-toggle__icon--moon {
+    display: none;
+}
+
+/* Light Theme: Show Moon */
+:root[data-theme="light"] .theme-toggle__icon--sun {
+    display: none;
+}
+
+:root[data-theme="light"] .theme-toggle__icon--moon {
+    display: block;
+}
 
 @media (max-width: 780px) {
   .nav__toggle { display: flex; }
