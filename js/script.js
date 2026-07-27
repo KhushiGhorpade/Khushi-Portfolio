@@ -229,9 +229,9 @@ initScrollReveal();
              {{from_name}}, {{reply_to}}, {{message}}
    ========================================================================== */
 
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";   // EDIT ME
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";   // EDIT ME
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // EDIT ME
+const EMAILJS_PUBLIC_KEY = "Hw8Joy4GvVlC424it";
+const EMAILJS_SERVICE_ID = "service_6ugtc9k";
+const EMAILJS_TEMPLATE_ID = "template_bs4u6we";
 
 if (window.emailjs && EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
   emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
