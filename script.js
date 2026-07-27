@@ -34,20 +34,20 @@ const themeToggle = document.getElementById("themeToggle");
 function applyTheme(theme) {
   root.setAttribute("data-theme", theme);
   localStorage.setItem("kg-theme", theme);
-}
 
-// Restore saved preference, falling back to the visitor's OS preference.
-const savedTheme = localStorage.getItem("kg-theme");
-if (savedTheme) {
-  applyTheme(savedTheme);
-} else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-  applyTheme("light");
-}
+  const moon = document.querySelector(".theme-toggle__icon--moon");
+  const sun = document.querySelector(".theme-toggle__icon--sun");
 
-themeToggle.addEventListener("click", () => {
-  const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-  applyTheme(next);
-});
+  if (theme === "dark") {
+    // Show sun because clicking it will switch to light
+    sun.style.display = "block";
+    moon.style.display = "none";
+  } else {
+    // Show moon because clicking it will switch to dark
+    sun.style.display = "none";
+    moon.style.display = "block";
+  }
+}
 
 /* ==========================================================================
    NETWORK BACKGROUND CANVAS

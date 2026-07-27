@@ -183,22 +183,22 @@ h1, h2, h3 { font-family: var(--font-display); color: var(--ink); margin: 0; }
   transition: border-color 0.15s ease, color 0.15s ease;
 }
 .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
-/* Default (Dark Theme): Show Sun */
+/* Dark theme (default): Show Sun */
 .theme-toggle__icon--sun {
-    display: block;
+  display: block;
 }
 
 .theme-toggle__icon--moon {
-    display: none;
+  display: none;
 }
 
-/* Light Theme: Show Moon */
+/* Light theme: Show Moon */
 :root[data-theme="light"] .theme-toggle__icon--sun {
-    display: none;
+  display: none;
 }
 
 :root[data-theme="light"] .theme-toggle__icon--moon {
-    display: block;
+  display: block;
 }
 
 @media (max-width: 780px) {
